@@ -1,3 +1,4 @@
+import PageButton from './PageButton'
 
 export function NavBar ({ page, setPage }) {
   const nextPage = () => {
@@ -6,19 +7,12 @@ export function NavBar ({ page, setPage }) {
   const prevPage = () => {
     setPage(page - 1)
   }
+
   return (
-    <header className='w-full flex justify-between py-4' >
-      <button className='bg-red-700 text-slate-100 py-1 px-2 rounded'
-        onClick={prevPage}
-      >
-        Page: {page - 1}
-      </button>
+    <nav className='w-full max-w-md mx-auto flex justify-between py-8 text-lg' >
+      <PageButton onClick={prevPage} page={page - 1} />
       <span className='py-1' >{page}</span>
-      <button className='bg-red-700 text-slate-100 py-1 px-2 rounded'
-        onClick={nextPage}
-      >
-        Page: {page + 1}
-      </button>
-    </header >
+      <PageButton onClick={nextPage} page={page + 1} next={true} />
+    </nav >
   )
 }

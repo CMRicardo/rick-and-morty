@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { getCharacters } from '../api/getCharacters'
 import { Character, NavBar } from './'
 
 export function CharacterList () {
@@ -7,12 +8,7 @@ export function CharacterList () {
   const [page, setPage] = useState(1)
 
   useEffect(() => {
-    async function fetchData () {
-      const response = await fetch(`https://rickandmortyapi.com/api/character?page=${page}`)
-      const { results } = await response.json()
-      setCharacters(results)
-    }
-    fetchData()
+    getCharacters({ page }).then(setCharacters)
     setLoading(false)
   }, [page])
 
