@@ -7,3 +7,4 @@ This project was made using:
 * Rick and Morty [API](https://rickandmortyapi.com/)
 
 and following the [Fazt Code tutorial](https://www.youtube.com/watch?v=H1aNTRK3YfU) as guide.
+![Rick and Morty Screenshot](./images/Screenshot%20Rick%20and%20Morty.png)
