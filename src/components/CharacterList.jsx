@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react'
 import { getCharacters } from '../api/getCharacters'
-import { Character, NavBar } from './'
+import { NavBar, Spinner, Character } from './'
 
-export function CharacterList () {
+export default function CharacterList () {
   const [characters, setCharacters] = useState([])
   const [loading, setLoading] = useState(true)
   const [page, setPage] = useState(1)
@@ -18,7 +18,7 @@ export function CharacterList () {
       <ul className='grid place-items-center gap-4 md:grid-cols-2 lg:grid-cols-3' >
         {
           loading
-            ? <div>Loading...</div>
+            ? <Spinner/>
             : characters.map((character) => (
               <Character
                 key={character.id}
