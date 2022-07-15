@@ -7,7 +7,7 @@ export function Navbar() {
         className='hover:bg-gray-800/40 rounded px-4 py-2 transition-colors focus:outline-none focus:ring focus-visible:ring-accent ring-offset-4 ring-offset-transparent'
         href='/'
       >
-        <h1 className='font-bold text-5xl text-accent'>Rick and Morty</h1>
+        <h1 className='font-bold text-4xl text-accent'>Rick and Morty</h1>
       </a>
       <ul className='flex gap-4 justify-center'>
         <li>
