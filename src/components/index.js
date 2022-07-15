@@ -1,3 +1,7 @@
-export { NavBar } from './NavBar'
+export { Pagination } from './Pagination'
 export { Spinner } from './Spinner'
 export { Character } from './Character'
+export { Navbar } from './Navbar'
+export { Header } from './Header'
+export { CharacterList } from './CharacterList'
+export { NavItem } from './NavItem'
