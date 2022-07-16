@@ -1,4 +1,4 @@
-import PageButton from './PageButton'
+import { PageButton } from './'
 
 export function Pagination({ page, setPage }) {
   const nextPage = () => {

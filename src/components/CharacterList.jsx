@@ -15,6 +15,12 @@ export function CharacterList() {
   return (
     <section>
       <Pagination page={page} setPage={setPage} />
+      <h2
+        className='text-center text-3xl font-bold decoration-accent underline my-4'
+        id='character-list'
+      >
+        Character list
+      </h2>
       <ul className='grid place-items-center gap-4 md:grid-cols-2 lg:grid-cols-3'>
         {loading ? (
           <Spinner />
