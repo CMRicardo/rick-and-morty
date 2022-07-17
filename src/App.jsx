@@ -1,6 +1,6 @@
 import { Route } from 'wouter'
 import { CharacterList, Header, Navbar, Footer } from './components'
-import { About, Details } from './pages'
+import { About, Details, SearchResults } from './pages'
 
 export default function App() {
   return (
@@ -11,6 +11,7 @@ export default function App() {
         <Route path='/' component={CharacterList} />
         <Route path='/about' component={About} />
         <Route path='/characters/:id' component={Details} />
+        <Route path='/search-results/:name' component={SearchResults} />
       </main>
       <Footer />
     </>

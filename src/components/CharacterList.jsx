@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { getCharacters } from '../api/getCharacters'
+import { getCharacters } from '../api'
 import { Pagination, Spinner, Character } from './'
 
 export function CharacterList() {
