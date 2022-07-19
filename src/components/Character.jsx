@@ -2,7 +2,7 @@ import { Link } from 'wouter'
 
 export function Character({ id, image, name, status, species, origin }) {
   return (
-    <li className='grid gap-2 max-w-sm relative'>
+    <>
       <Link
         className='hover:grayscale transition-colors peer'
         href={`/characters/${id}`}
@@ -24,6 +24,6 @@ export function Character({ id, image, name, status, species, origin }) {
           {status}
         </p>
       </div>
-    </li>
+    </>
   )
 }

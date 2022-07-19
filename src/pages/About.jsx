@@ -1,7 +1,5 @@
+import { PageHeading } from '../components'
+
 export function About() {
-  return (
-    <h1 className='text-5xl text-center'>
-      Under development <br /> 🚧
-    </h1>
-  )
+  return <PageHeading id='About'>Under development 🚧</PageHeading>
 }
