@@ -17,13 +17,11 @@ export function Character({ id, image, name, status, species, origin }) {
           <span className='font-bold text-lg'>Origin: </span>
           {origin.name}
         </p>
-      </Link>
-      <div className='hidden peer-hover:absolute peer-hover:block top-1/2 left-1/3 text-gray-50 bg-black/80 py-2 px-4'>
         <p>
           <span className='font-bold text-lg'>Status: </span>
           {status}
         </p>
-      </div>
+      </Link>
     </>
   )
 }
