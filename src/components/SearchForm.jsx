@@ -1,24 +1,16 @@
-import { useContext, useState } from 'react'
+import { useState } from 'react'
 import { useLocation } from 'wouter'
-import { searchCharacter } from '../api'
-import { SearchContext } from '../context'
 import { SearchIcon } from './SearchIcon'
 
 export function SearchForm() {
   const [keyword, setKeyword] = useState('')
   const [, setLocation] = useLocation()
-  const { setSearchResults, setSearchInfo } = useContext(SearchContext)
 
   const handleOnSubmit = (evt) => {
     evt.preventDefault()
     if (keyword.length < 3) return
     setKeyword('')
-    searchCharacter({ keyword }).then((res) => {
-      const { results, info } = res
-      setSearchResults(results)
-      setSearchInfo(info)
-      setLocation(`/search-results/${encodeURI(keyword)}`)
-    })
+    setLocation(`/search-results/${encodeURI(keyword)}`)
   }
   const handleOnChange = (evt) => {
     const value = evt.target.value

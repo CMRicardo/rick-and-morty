@@ -1,18 +1,27 @@
-import { useContext } from 'react'
+import { useEffect, useState } from 'react'
+import { searchCharacter } from '../api'
 import { CharacterList, PageHeading } from '../components'
-import { SearchContext } from '../context'
 
 export function SearchResults({ params }) {
-  const { searchResults, searchInfo } = useContext(SearchContext)
-  const { count, next, prev } = searchInfo
-  const { name } = params
+  const { keyword } = params
 
+  const [searchResults, setSearchResults] = useState([])
+  const [searchInfo, setSearchInfo] = useState({})
+
+  useEffect(() => {
+    searchCharacter({ keyword }).then(({ results, info }) => {
+      setSearchResults(results)
+      setSearchInfo(info)
+    })
+  }, [keyword])
+
+  const { count } = searchInfo || 0
   const pluralOrSingular = count === 1 ? 'result' : 'results'
 
   return (
     <>
-      <PageHeading id='Search results'>
-        We found {count} {pluralOrSingular} of {decodeURI(name)}
+      <PageHeading id='Search-results'>
+        We found {count} {pluralOrSingular} of "{decodeURI(keyword)}"
       </PageHeading>
       <CharacterList characters={searchResults} />
     </>

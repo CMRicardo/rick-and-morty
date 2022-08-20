@@ -15,7 +15,7 @@ export default function App() {
           <Route path='/' component={Home} />
           <Route path='/about' component={About} />
           <Route path='/characters/:id' component={Details} />
-          <Route path='/search-results/:name' component={SearchResults} />
+          <Route path='/search-results/:keyword' component={SearchResults} />
         </main>
         <Footer />
       </SearchContextProvider>
