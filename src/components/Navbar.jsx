@@ -15,9 +15,6 @@ export function Navbar() {
       </h1>
       <ul className='flex gap-4 justify-center'>
         <li>
-          <NavItem to='/#characters'>Character List</NavItem>
-        </li>
-        <li>
           <NavItem to='/about'>About</NavItem>
         </li>
       </ul>

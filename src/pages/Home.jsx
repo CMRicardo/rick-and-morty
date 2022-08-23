@@ -13,7 +13,7 @@ export function Home() {
   return (
     <section>
       <Pagination page={page} setPage={setPage} />
-      <PageHeading id='characters'>Character list</PageHeading>
+      <PageHeading>Character list</PageHeading>
       <CharacterList characters={characters} />
       <Pagination page={page} setPage={setPage} />
     </section>
