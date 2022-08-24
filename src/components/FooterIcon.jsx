@@ -1,11 +1,18 @@
-export function FooterIcon({ img, name, url }) {
+import { Github, Twitter } from '../icons'
+
+const SocialMedia = {
+  Twitter: <Twitter height={32} width={32} />,
+  Github: <Github height={32} width={32} />,
+}
+
+export function FooterIcon({ name, url }) {
   return (
     <a
-      className='focus:outline-none focus:ring focus-visible:ring-accent ring-offset-8 ring-offset-transparent rounded hover:text-accent transition-colors'
-      href={`${url}`}
+      className='hover:text-gray-400 transition-colors'
+      href={url}
       target='_blank'
     >
-      <img src={`${img}`} alt={`${name}`} />
+      {SocialMedia[name]}
     </a>
   )
 }

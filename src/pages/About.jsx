@@ -16,7 +16,7 @@ export function About() {
         </a>
       </p>
 
-      <section className='grid gap-4 place-items-center'>
+      <section className='grid gap-4'>
         <h2 className='text-xl'>Using the follow technologies:</h2>
         <ul className='flex gap-8 items-center justify-center'>
           <li>
