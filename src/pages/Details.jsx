@@ -15,7 +15,7 @@ export function Details({ params }) {
   return character ? (
     <>
       <PageHeading>Details of {character.name}</PageHeading>
-      <div className='grid gap-4 items-center sm:grid-cols-2'>
+      <div className='grid gap-4 items-center sm:grid-cols-2 place-items-center max-w-4xl'>
         <Character {...character} />
         <section className='text-xl'>
           <ul className='grid gap-2'>

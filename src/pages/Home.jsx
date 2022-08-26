@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { getCharacters } from '../api'
-import { CharacterList, PageHeading, Pagination } from '../components'
+import { CharacterList, PageHeading, Pagination, Spinner } from '../components'
 
 export function Home() {
   const [characters, setCharacters] = useState([])
@@ -14,7 +14,7 @@ export function Home() {
     <section>
       <Pagination page={page} setPage={setPage} />
       <PageHeading>Character list</PageHeading>
-      <CharacterList characters={characters} />
+      {characters ? <CharacterList characters={characters} /> : <Spinner />}
       <Pagination page={page} setPage={setPage} />
     </section>
   )
