@@ -1,6 +1,5 @@
 # Rick and Morty Web Page
 
----
 This project was made using:
 
 * React
