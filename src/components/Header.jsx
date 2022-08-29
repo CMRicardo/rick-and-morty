@@ -10,8 +10,10 @@ export function Header() {
         className='grid place-items-center header-bg min-h-[80vh] md:min-h-[85vh] brightness-75'
       >
         <motion.img
-          initial={{ scale: 0.9 }}
-          animate={{ scale: 1 }}
+          animate={{
+            scale: [0.2, 1],
+            rotate: [0, 180, 270, 360],
+          }}
           src='/images/Rick_and_Morty.png'
           alt='Rick and Morty logo'
         />
