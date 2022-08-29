@@ -1,8 +1,13 @@
 import { PageHeading, Technology } from '../components'
+import { motion } from 'framer-motion'
 
 export function About() {
   return (
-    <section className='grid gap-4'>
+    <motion.section
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      className='grid gap-4'
+    >
       <PageHeading>About</PageHeading>
 
       <p className='text-2xl'>
@@ -30,6 +35,6 @@ export function About() {
           </li>
         </ul>
       </section>
-    </section>
+    </motion.section>
   )
 }
