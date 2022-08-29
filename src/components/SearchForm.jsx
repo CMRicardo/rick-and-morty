@@ -30,6 +30,7 @@ export function SearchForm() {
       />
       <motion.button
         whileFocus={{ scale: 1.1 }}
+        whileHover={{ scale: 1.1 }}
         className='px-2 py-1 bg-gray-700 rounded rounded-l-none focus:outline-none focus:ring focus-visible:ring-accent ring-offset-4 ring-offset-transparent'
         aria-label='Search a character!'
       >
