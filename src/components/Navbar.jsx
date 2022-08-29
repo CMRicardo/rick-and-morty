@@ -1,24 +1,42 @@
 import { Link } from 'wouter'
 import { NavItem } from './NavItem'
 import { SearchForm } from './SearchForm'
+import { motion } from 'framer-motion'
 
 export function Navbar() {
   return (
-    <nav className='grid grid-cols-1 md:grid-cols-3 place-items-center justify-between gap-4 bg-black text-white md:sticky md:top-0 py-2 z-10'>
-      <h1 className='font-extrabold text-transparent text-4xl bg-clip-text bg-gradient-to-r from-accent to-yellow-300'>
+    <motion.nav
+      initial={{ opacity: 0, scale: 0.8 }}
+      animate={{ opacity: 1, scale: 1 }}
+      className='grid grid-cols-1 md:grid-cols-3 place-items-center justify-between gap-4 bg-black text-white md:sticky md:top-0 py-2 z-10'
+    >
+      <motion.h1
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.9 }}
+        whileFocus={{ scale: 1.1 }}
+        className='font-extrabold text-transparent text-4xl bg-clip-text bg-gradient-to-r from-accent to-yellow-300'
+      >
         <Link
-          className='hover:bg-gray-500/40 rounded px-4 py-2 transition-colors focus:outline-none focus:ring focus-visible:ring-accent ring-offset-4 ring-offset-transparent'
+          className='rounded px-4 py-2 transition-colors focus:outline-none focus:ring focus-visible:ring-accent ring-offset-4 ring-offset-transparent'
           href='/'
         >
           Rick and Morty
         </Link>
-      </h1>
+      </motion.h1>
+
       <ul className='flex gap-4 justify-center'>
-        <li>
+        <motion.li
+          whileHover={{
+            scale: 1.1,
+          }}
+          whileTap={{
+            scale: 0.9,
+          }}
+        >
           <NavItem to='/about'>About</NavItem>
-        </li>
+        </motion.li>
       </ul>
       <SearchForm />
-    </nav>
+    </motion.nav>
   )
 }

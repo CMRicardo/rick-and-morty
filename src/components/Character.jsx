@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion'
 import { Link } from 'wouter'
 
 export function Character({ id, image, name, status, species, origin }) {
@@ -8,9 +9,14 @@ export function Character({ id, image, name, status, species, origin }) {
   }
 
   return (
-    <>
+    <motion.div
+      initial={{ opacity: 0, scale: 0.8 }}
+      animate={{ opacity: 1, scale: 1 }}
+      whileHover={{ scale: 1.1 }}
+      whileTap={{ scale: 0.9 }}
+    >
       <Link
-        className='hover:brightness-75 grid grid-cols-1 md:grid-cols-2 hover:bg-gray-900 focus:outline-none focus:ring focus:ring-offset-4 focus:ring-offset-transparent focus:ring-accent'
+        className='grid grid-cols-1 md:grid-cols-2  focus:outline-none focus:ring focus:ring-offset-4 focus:ring-offset-transparent focus:ring-accent'
         href={`/characters/${id}`}
       >
         <img src={image} alt={`${name}'s image`} />
@@ -31,6 +37,6 @@ export function Character({ id, image, name, status, species, origin }) {
           </p>
         </div>
       </Link>
-    </>
+    </motion.div>
   )
 }
