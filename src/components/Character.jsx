@@ -11,9 +11,10 @@ export function Character({ id, image, name, status, species, origin }) {
   return (
     <motion.div
       initial={{ opacity: 0, scale: 0.8 }}
-      animate={{ opacity: 1, scale: 1 }}
+      animate={{ opacity: 1, scale: 0.9 }}
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.9 }}
+      whileInView={{ opacity: 1, scale: 1 }}
     >
       <Link
         className='grid grid-cols-1 md:grid-cols-2  focus:outline-none focus:ring focus:ring-offset-4 focus:ring-offset-transparent focus:ring-accent'
